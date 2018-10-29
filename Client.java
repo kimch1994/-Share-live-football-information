@@ -67,15 +67,15 @@ public class Client extends JFrame implements ActionListener{
 	parsing sc = new parsing();
 	public Client()
 	{
-		super("¶óÀÌºê ½ºÄÚ¾î");
-		ii=new ImageIcon("¾ÆÀÌÄÜ.jpg");
+		super("í•´ì™¸ ì¶•êµ¬ ì •ë³´ ê³µìœ ");
+		ii=new ImageIcon("ì•„ì´ì½˜.jpg");
 		this.setIconImage(ii.getImage());
 
-		f1 = new Font("µ¸À½",Font.BOLD,15);
-		f2 = new Font("ÇÔÃÊ·Õ¹ÙÅÁ",Font.ROMAN_BASELINE,12);
+		f1 = new Font("ë‹ìŒ",Font.BOLD,15);
+		f2 = new Font("í•¨ì´ˆë¡±ë°”íƒ•",Font.ROMAN_BASELINE,12);
 		f3 = new Font("HYPost",Font.BOLD,20);
-		f4 = new Font("ÈŞ¸ÕµÕ±ÙÇìµå¶óÀÎ",Font.BOLD,23);
-		icon = new ImageIcon("¹è°æ.jpg");
+		f4 = new Font("íœ´ë¨¼ë‘¥ê·¼í—¤ë“œë¼ì¸",Font.BOLD,23);
+		icon = new ImageIcon("ë°°ê²½.jpg");
 
 		JPanel background = new JPanel() {
 			public void paintComponent(Graphics g) {
@@ -89,7 +89,7 @@ public class Client extends JFrame implements ActionListener{
 		search = new JTextField();
 		search.setBorder(javax.swing.BorderFactory.createEmptyBorder());
 		search.setBounds(220, 50, 120, 30);
-		search_button = new JButton("¹öÆ°");
+		search_button = new JButton("ë²„íŠ¼");
 		search_button.setFont(f2);
 		search_button.setBounds(350,50,80,30);
 		search_button.setForeground(Color.BLACK);
@@ -107,17 +107,17 @@ public class Client extends JFrame implements ActionListener{
 		//jp_1.setBorder(javax.swing.BorderFactory.createEmptyBorder());
 		jp_1.setBounds(270,100,375,320);
 
-		a = new JLabel("ÇÁ¸®¹Ì¾î¸®±×, ¶ó¸®°¡, ºĞµ¥½º¸®°¡, ¼¼¸®¿¡A, ¸®±×¾Ó1 ¸¸ °Ë»ö°¡´ÉÇÕ´Ï´Ù.");
+		a = new JLabel("í”„ë¦¬ë¯¸ì–´ë¦¬ê·¸, ë¼ë¦¬ê°€, ë¶„ë°ìŠ¤ë¦¬ê°€, ì„¸ë¦¬ì—A, ë¦¬ê·¸ì•™1 ë§Œ ê²€ìƒ‰ê°€ëŠ¥í•©ë‹ˆë‹¤.");
 		a.setBounds(90, 10, 500, 30);
 		a.setFont(f1);
 		a.setForeground(Color.ORANGE);
 
-		b = new JLabel("½Ç½Ã°£ ¼øÀ§");
+		b = new JLabel("ì‹¤ì‹œê°„ ìˆœìœ„");
 		b.setBounds(95, 70, 500, 30);
 		b.setFont(f2);
 		b.setForeground(Color.ORANGE);
 
-		c = new JLabel("½Ç½Ã°£ ¼±¼ö ±â·Ï");
+		c = new JLabel("ì‹¤ì‹œê°„ ì„ ìˆ˜ ê¸°ë¡");
 		c.setBounds(440, 70, 500, 30);
 		c.setFont(f2);
 		c.setForeground(Color.ORANGE);
@@ -127,7 +127,7 @@ public class Client extends JFrame implements ActionListener{
 		area.setEditable(false);
 
 
-		label = new JLabel("´Ğ³×ÀÓ :");
+		label = new JLabel("ë‹‰ë„¤ì„ :");
 		label.setFont(f2);
 		label.setBounds(360, 425, 50, 30);
 		label.setForeground(Color.ORANGE);
@@ -135,42 +135,35 @@ public class Client extends JFrame implements ActionListener{
 		input_ID = new JTextField();
 		input_ID.setBounds(410, 425, 100, 30);
 
-		button = new JButton("·Î±×ÀÎ");
+		button = new JButton("ë¡œê·¸ì¸");
 		button.setBounds(520,425,80,30);
-		button.addActionListener(this); // ·Î±×ÀÎ Ã³¸®
+		button.addActionListener(this); // ë¡œê·¸ì¸ ì²˜ë¦¬
 
 		input = new JTextField();
 		input.setBounds(270,737,375,30);
 		input.addActionListener(this);
 		input.setEditable(false);
 
-		jl_2 = new JLabel("±âÅ¸ ¿É¼Ç");
+		jl_2 = new JLabel("ê¸°íƒ€ ì˜µì…˜");
 		jl_2.setFont(f3);
 		jl_2.setBounds(90, 400, 100, 100);
 		jl_2.setForeground(Color.getHSBColor(120, 84, 146));
 
-		button_2 = new JButton("¹ß·Õµµ¸£ ¼ö»óÀÚ ");
+		button_2 = new JButton("ë°œë¡±ë„ë¥´ ìˆ˜ìƒì ");
 		button_2.setBounds(55,480,160,60);
 		button_2.setFont(f2);
 		button_2.setForeground(Color.BLACK);
 		button_2.setBackground(Color.ORANGE);
 		button_2.addActionListener(this);
 
-		button_3 = new JButton("ÇÏÀÌ¶óÀÌÆ® ¿µ»ó");
+		button_3 = new JButton("í•˜ì´ë¼ì´íŠ¸ ì˜ìƒ");
 		button_3.setBounds(55,550,160,60);
 		button_3.setFont(f2);
 		button_3.setForeground(Color.BLACK);
 		button_3.setBackground(Color.ORANGE);
 		button_3.addActionListener(this);
 
-		button_4 = new JButton("¹è´çÈ®ÀÎ");
-		button_4.setBounds(55,620,160,60);
-		button_4.setFont(f2);
-		button_4.setForeground(Color.BLACK);
-		button_4.setBackground(Color.ORANGE);
-		button_4.addActionListener(this);
-
-		//½Ã°£
+		//ì‹œê°„
 		timer = new javax.swing.Timer(1000, this); 
 		timer.setInitialDelay(0); 
 		timer.start(); 
@@ -199,7 +192,6 @@ public class Client extends JFrame implements ActionListener{
 		background.add(jl_2);
 		background.add(button_2);
 		background.add(button_3);
-		background.add(button_4);
 
 		scrollPane = new JScrollPane(background);
 		setContentPane(scrollPane);
@@ -220,37 +212,37 @@ public class Client extends JFrame implements ActionListener{
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
 		Object o = e.getSource();
-		String check = search.getText(); // ÀÔ·ÂÇÑ Å°¿öµå¸¦ ºÒ·¯¿Â´Ù.
+		String check = search.getText(); // ì…ë ¥í•œ í‚¤ì›Œë“œë¥¼ ë¶ˆëŸ¬ì˜¨ë‹¤.
 
 		if(o == search_button)
 		{
 			int a=1;
 
 			name=check;
-			if(name.equals("ÇÁ¸®¹Ì¾î¸®±×"))
+			if(name.equals("í”„ë¦¬ë¯¸ì–´ë¦¬ê·¸"))
 			{
 				name ="epl";
 				leaguecheck=1;
 			}
-			else if(name.equals("¶ó¸®°¡"))
+			else if(name.equals("ë¼ë¦¬ê°€"))
 			{
 				name ="primera";
 				leaguecheck=4;
 			}
 
-			else if(name.equals("ºĞµ¥½º¸®°¡"))
+			else if(name.equals("ë¶„ë°ìŠ¤ë¦¬ê°€"))
 			{
 				name ="bundesliga";
 				leaguecheck=3;
 			}
 
-			else if(name.equals("¼¼¸®¿¡A"))
+			else if(name.equals("ì„¸ë¦¬ì—A"))
 			{
 				name ="seriea";
 				leaguecheck=4;
 			}
 
-			else if(name.equals("¸®±×¾Ó1"))
+			else if(name.equals("ë¦¬ê·¸ì•™1"))
 			{
 				name ="ligue1";
 				leaguecheck=2;
@@ -258,19 +250,19 @@ public class Client extends JFrame implements ActionListener{
 
 			else
 			{
-				JOptionPane.showMessageDialog(null, "°Ë»ö ¸í·É¾î°¡ ¾Æ´Õ´Ï´Ù.", "°Ë»ö ¿À·ù", JOptionPane.ERROR_MESSAGE);
+				JOptionPane.showMessageDialog(null, "ê²€ìƒ‰ ëª…ë ¹ì–´ê°€ ì•„ë‹™ë‹ˆë‹¤.", "ê²€ìƒ‰ ì˜¤ë¥˜", JOptionPane.ERROR_MESSAGE);
 				a=2;
 			}
 
 			if(a==1)
 			{
 				model.removeAllElements();
-				model.addElement("¼øÀ§        ÆÀ       ½ÂÁ¡     ¸®±× ÃÖ±Ù 5°æ±â");
+				model.addElement("ìˆœìœ„        íŒ€       ìŠ¹ì      ë¦¬ê·¸ ìµœê·¼ 5ê²½ê¸°");
 				if((leaguecheck == 1) || (leaguecheck == 2) || (leaguecheck == 4) )
 				{
 					for(int i=0; i<20; i++)
 					{
-						model.addElement(sc.pa().get(i).getRank()+"À§    "+sc.pa().get(i).getTeam()+"    "+sc.pa().get(i).getWin()+"    "+sc.pa().get(i).getRecent());
+						model.addElement(sc.pa().get(i).getRank()+"ìœ„    "+sc.pa().get(i).getTeam()+"    "+sc.pa().get(i).getWin()+"    "+sc.pa().get(i).getRecent());
 						model.addElement(sc.im().get(i).getImage());
 					}
 				}
@@ -278,70 +270,60 @@ public class Client extends JFrame implements ActionListener{
 				{
 					for(int i=0; i<18; i++)
 					{
-						model.addElement(sc.pa().get(i).getRank()+"À§    "+sc.pa().get(i).getTeam()+"    "+sc.pa().get(i).getWin()+"    "+sc.pa().get(i).getRecent());
+						model.addElement(sc.pa().get(i).getRank()+"ìœ„    "+sc.pa().get(i).getTeam()+"    "+sc.pa().get(i).getWin()+"    "+sc.pa().get(i).getRecent());
 						model.addElement(sc.im().get(i).getImage());
 					}
 				}
 				model_1.removeAllElements();
-				model_1.addElement("¼øÀ§    ¼±¼ö(ÆÀ)                   °æ±â¼ö  µæÁ¡(PK)  µµ¿ò  °ø°İÆ÷ÀÎÆ®");
+				model_1.addElement("ìˆœìœ„    ì„ ìˆ˜(íŒ€)                   ê²½ê¸°ìˆ˜  ë“ì (PK)  ë„ì›€  ê³µê²©í¬ì¸íŠ¸");
 				if(leaguecheck == 1) // epl
 				{
 					for(int i=0; i<60; i++)
 					{
-						model_1.addElement(sc.player().get(i).getRank_1()+"À§     "+sc.player().get(i).getName()+"       "+
-								sc.player().get(i).getScore()+"°æ±â       "+sc.player().get(i).getPk()+"µæÁ¡       "+sc.player().get(i).getSubpoint()+"µµ¿ò       "+sc.player().get(i).getPoint()+"Æ÷ÀÎÆ®");
+						model_1.addElement(sc.player().get(i).getRank_1()+"ìœ„     "+sc.player().get(i).getName()+"       "+
+								sc.player().get(i).getScore()+"ê²½ê¸°       "+sc.player().get(i).getPk()+"ë“ì        "+sc.player().get(i).getSubpoint()+"ë„ì›€       "+sc.player().get(i).getPoint()+"í¬ì¸íŠ¸");
 					}
 				}
-				else if(leaguecheck == 2) //¸®±×¾Ó
+				else if(leaguecheck == 2) //ë¦¬ê·¸ì•™
 				{
 					for(int i=0; i<35; i++)
 					{
-						model_1.addElement(sc.player().get(i).getRank_1()+"À§     "+sc.player().get(i).getName()+"       "+
-								sc.player().get(i).getScore()+"°æ±â       "+sc.player().get(i).getPk()+"µæÁ¡       "+sc.player().get(i).getSubpoint()+"µµ¿ò       "+sc.player().get(i).getPoint()+"Æ÷ÀÎÆ®");
+						model_1.addElement(sc.player().get(i).getRank_1()+"ìœ„     "+sc.player().get(i).getName()+"       "+
+								sc.player().get(i).getScore()+"ê²½ê¸°       "+sc.player().get(i).getPk()+"ë“ì        "+sc.player().get(i).getSubpoint()+"ë„ì›€       "+sc.player().get(i).getPoint()+"í¬ì¸íŠ¸");
 					}
 				}
-				else if(leaguecheck == 3) //ºĞµ¥½º¸®°¡
+				else if(leaguecheck == 3) //ë¶„ë°ìŠ¤ë¦¬ê°€
 				{
 					for(int i=0; i<30; i++)
 					{
-						model_1.addElement(sc.player().get(i).getRank_1()+"À§     "+sc.player().get(i).getName()+"       "+
-								sc.player().get(i).getScore()+"°æ±â       "+sc.player().get(i).getPk()+"µæÁ¡       "+sc.player().get(i).getSubpoint()+"µµ¿ò       "+sc.player().get(i).getPoint()+"Æ÷ÀÎÆ®");
+						model_1.addElement(sc.player().get(i).getRank_1()+"ìœ„     "+sc.player().get(i).getName()+"       "+
+								sc.player().get(i).getScore()+"ê²½ê¸°       "+sc.player().get(i).getPk()+"ë“ì        "+sc.player().get(i).getSubpoint()+"ë„ì›€       "+sc.player().get(i).getPoint()+"í¬ì¸íŠ¸");
 					}
 				}
-				else if(leaguecheck == 4) //¼¼¸®¿¡A , ¶ó¸®°¡
+				else if(leaguecheck == 4) //ì„¸ë¦¬ì—A , ë¼ë¦¬ê°€
 				{
 					for(int i=0; i<32; i++)
 					{
-						model_1.addElement(sc.player().get(i).getRank_1()+"À§     "+sc.player().get(i).getName()+"       "+
-								sc.player().get(i).getScore()+"°æ±â       "+sc.player().get(i).getPk()+"µæÁ¡       "+sc.player().get(i).getSubpoint()+"µµ¿ò       "+sc.player().get(i).getPoint()+"Æ÷ÀÎÆ®");
+						model_1.addElement(sc.player().get(i).getRank_1()+"ìœ„     "+sc.player().get(i).getName()+"       "+
+								sc.player().get(i).getScore()+"ê²½ê¸°       "+sc.player().get(i).getPk()+"ë“ì        "+sc.player().get(i).getSubpoint()+"ë„ì›€       "+sc.player().get(i).getPoint()+"í¬ì¸íŠ¸");
 					}
 				}
 			}
 		}
 
-		if(o == button)//´Ğ³×ÀÓ ÀÔ·ÂºÎºĞ
+		if(o == button)//ë‹‰ë„¤ì„ ì…ë ¥ë¶€ë¶„
 		{
-			String id = input_ID.getText();  // ÅØ½ºÆ®ÇÊµå¿¡ ÀÔ·ÂµÈ ¾Æ¾Æµğ °ªÀ» ¼­¹ö·Î º¸³»±â À§ÇØ ¼³Á¤.
-			if(id == null || id.trim().equals("")){ // ¾ÆÀÌµğ¸¦ ÀÔ·Â ¾ÈÇÒ½Ã ¾ÆÀÌµğ¸¦ ÀÔ·ÂÇÏµµ·Ï ¸Ş¼¼Áö¸¦ º¸¿©ÁØ´Ù.
-				area.append("»ç¿ëÇÏ°íÀÚ ÇÏ´Â ´Ğ³×ÀÓ¸¦ ÀÔ·ÂÇÏ¼¼¿ä.");
+			String id = input_ID.getText();  // í…ìŠ¤íŠ¸í•„ë“œì— ì…ë ¥ëœ ì•„ì•„ë”” ê°’ì„ ì„œë²„ë¡œ ë³´ë‚´ê¸° ìœ„í•´ ì„¤ì •.
+			if(id == null || id.trim().equals("")){ // ì•„ì´ë””ë¥¼ ì…ë ¥ ì•ˆí• ì‹œ ì•„ì´ë””ë¥¼ ì…ë ¥í•˜ë„ë¡ ë©”ì„¸ì§€ë¥¼ ë³´ì—¬ì¤€ë‹¤.
+				area.append("ì‚¬ìš©í•˜ê³ ì í•˜ëŠ” ë‹‰ë„¤ì„ë¥¼ ì…ë ¥í•˜ì„¸ìš”.");
 				area.append("\n");
 				return;
 			} 
 			else
 			{ 
-				area.append("¡ØºÒ¹ı½ºÆ÷Ã÷ µµ¹ÚÀº ¹ú±İÇü ¶Ç´Â Â¡¿ªÇüÀ» ¹ŞÀ»¼öÀÖ½À´Ï´Ù.¡Ø");
+				area.append("-----"+getTime()+" ì ‘ì†ì™„ë£Œ    ë‹‰ë„¤ì„ : " + input_ID.getText()+"-----"); // ì…ë ¥í•œ ê²½ìš° ì„œë²„ë¡œ idê°’ì„ ë³´ë‚´ê²Œ ì„¤ì •.
 				area.append("\n");
-				area.append("¡ØÇÕ¹ıÀûÀÎ »çÀÌÆ®¸¦ ÀÌ¿ëÇÕ½Ã´Ù.!!¡Ø");
-				area.append("\n");
-				area.append("¡Ø°úÇÑ µµ¹ÚÀº °¡Á·À» ÀÒÀ» ¼öµµ ÀÖ½À´Ï´Ù.¡Ø");
-				area.append("\n");
-				area.append("ÇÑ±¹µµ¹Ú¹®Á¦ °ü¸®¼¾ÅÍ : ±¹¹ø¾øÀÌ 1336(24½Ã°£)");
-				area.append("\n");
-				area.append("KLÁßµ¶°ü¸®¼¾ÅÍ : ÀüÈ­»ó´ã 080-7575-545");
-				area.append("\n");
-				area.append("-----"+getTime()+" Á¢¼Ó¿Ï·á    ´Ğ³×ÀÓ : " + input_ID.getText()+"-----"); // ÀÔ·ÂÇÑ °æ¿ì ¼­¹ö·Î id°ªÀ» º¸³»°Ô ¼³Á¤.
-				area.append("\n");
-				area.append("¡Ø¶óÀÌºê½ºÄÚ¾î¿¡ ¿À½Å°ÍÀ» È¯¿µÇÕ´Ï´Ù.¡Ø");
+				area.append("â€»í•´ì™¸ ì¶•êµ¬ ì •ë³´ ì— ì˜¤ì‹ ê²ƒì„ í™˜ì˜í•©ë‹ˆë‹¤.â€»");
 				area.append("\n");
 				input_ID.setText("");
 				input_ID.setEditable(false);
@@ -350,10 +332,10 @@ public class Client extends JFrame implements ActionListener{
 
 			}
 
-			pw.println(id.trim());    // ÇØ´ç id °ªÀ» ¼­¹ö·Î Àü¼Û.
+			pw.println(id.trim());    // í•´ë‹¹ id ê°’ì„ ì„œë²„ë¡œ ì „ì†¡.
 			pw.flush(); 
 
-			InputThread sc = new InputThread(sock, br);  // ½º·¹µå ½ÃÀÛ
+			InputThread sc = new InputThread(sock, br);  // ìŠ¤ë ˆë“œ ì‹œì‘
 			sc.start();
 		}
 		if(o == input)
@@ -406,7 +388,7 @@ public class Client extends JFrame implements ActionListener{
 		hour = calendar2.get(Calendar.HOUR_OF_DAY); 
 		min = calendar2.get(Calendar.MINUTE); 
 		sec = calendar2.get(Calendar.SECOND); 
-		lbPresent.setText("ÇöÀç½Ã°¢ : "+ hour + ":" + min + ":" + sec); 
+		lbPresent.setText("í˜„ì¬ì‹œê° : "+ hour + ":" + min + ":" + sec); 
 
 	}
 
@@ -474,7 +456,7 @@ public class Client extends JFrame implements ActionListener{
 			}
 		}
 	}  
-	static String getTime() // ½Ã°£À» º¸¿©ÁÖ±âÀ§ÇÑ DATE Çü½Ä
+	static String getTime() // ì‹œê°„ì„ ë³´ì—¬ì£¼ê¸°ìœ„í•œ DATE í˜•ì‹
 	{
 		SimpleDateFormat f = new SimpleDateFormat("[hh:mm:ss]");
 		return f.format(new Date());
