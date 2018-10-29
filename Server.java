@@ -23,7 +23,7 @@ public class Server {
 		// TODO Auto-generated method stub
 		try{
 			ServerSocket server = new ServerSocket(8008);
-			System.out.println("¶óÀÌºê ½ºÄÚ¾î ¼­¹öÀÔ´Ï´Ù. Á¢¼ÓÀ» ±â´Ù¸³´Ï´Ù.");
+			System.out.println("í•´ì™¸ ì¶•êµ¬ ì •ë³´ ê³µìœ ì„œë²„ì…ë‹ˆë‹¤. ì ‘ì†ì„ ê¸°ë‹¤ë¦½ë‹ˆë‹¤.");
 			HashMap hm = new HashMap();
 			while(true)
 			{
@@ -58,13 +58,13 @@ class ChatThread extends Thread
 			PrintWriter pw = new PrintWriter(new OutputStreamWriter(sock.getOutputStream()));
 			br = new BufferedReader(new InputStreamReader(sock.getInputStream()));
 			id = br.readLine();
-			broadcast(id + "´ÔÀÌ Á¢¼ÓÇß½À´Ï´Ù.");
-			System.out.println(getTime()+"Á¢¼ÓÇÑ »ç¿ëÀÚÀÇ ¾ÆÀÌµğ´Â "+ id +"ÀÔ´Ï´Ù.");
+			broadcast(id + "ë‹˜ì´ ì ‘ì†í–ˆìŠµë‹ˆë‹¤.");
+			System.out.println(getTime()+"ì ‘ì†í•œ ì‚¬ìš©ìì˜ ì•„ì´ë””ëŠ” "+ id +"ì…ë‹ˆë‹¤.");
 
 			synchronized(hm)
 			{
 				hm.put(this.id, pw);
-				System.out.println("ÇöÀç Á¢¼ÓÀÚ ¼ö´Â " + hm.size() + "ÀÔ´Ï´Ù.");
+				System.out.println("í˜„ì¬ ì ‘ì†ì ìˆ˜ëŠ” " + hm.size() + "ì…ë‹ˆë‹¤.");
 			}
 			initFlag = true;
 		}catch(Exception ex)
@@ -105,9 +105,9 @@ class ChatThread extends Thread
 			synchronized(hm)
 			{
 				hm.remove(id);
-				System.out.println("ÇöÀç ¼­¹öÁ¢¼ÓÀÚ ¼ö´Â " + hm.size() + "ÀÔ´Ï´Ù.");
+				System.out.println("í˜„ì¬ ì„œë²„ì ‘ì†ì ìˆ˜ëŠ” " + hm.size() + "ì…ë‹ˆë‹¤.");
 			}
-			broadcast(id + " ´ÔÀÌ Á¢¼Ó Á¾·áÇß½À´Ï´Ù.");
+			broadcast(id + " ë‹˜ì´ ì ‘ì† ì¢…ë£Œí–ˆìŠµë‹ˆë‹¤.");
 			try{
 				if(sock != null)
 					sock.close();
@@ -144,7 +144,7 @@ class ChatThread extends Thread
 			if(obj != null)
 			{
 				PrintWriter pw = (PrintWriter)obj;
-				pw.println(id + "´ÔÀÌ ´ÙÀ½ÀÇ ±Ó¼Ó¸»À» º¸³»¼Ì½À´Ï´Ù. : "+ msg2);
+				pw.println(id + "ë‹˜ì´ ë‹¤ìŒì˜ ê·“ì†ë§ì„ ë³´ë‚´ì…¨ìŠµë‹ˆë‹¤. : "+ msg2);
 				pw.flush();
 			}
 		}
